@@ -1,0 +1,25 @@
+.resources__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 10px;
+}
+.resources__imgs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.resources__imgs img {
+  object-fit: cover;
+  min-height: 100%;
+}
+
+@media (max-width: 550px) {
+  .resources__imgs {
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+    align-items: center;
+  }
+}

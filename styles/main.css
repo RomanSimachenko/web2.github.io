@@ -1,0 +1,170 @@
+@import "./normalize/normalize.css";
+@import "./normalize/reset.css";
+
+body {
+  font-family: "Playfair Display", serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.header {
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 200px;
+  background: lightseagreen;
+}
+
+.header a {
+  color: #fff;
+  cursor: pointer;
+}
+
+.header__menu-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header__menu-nav a:hover {
+  text-decoration: underline;
+}
+
+.aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  border-left: 1px solid gray;
+  padding: 10px 20px;
+  line-height: 1.5;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main__content {
+  display: flex;
+  margin-right: 250px;
+  margin-bottom: auto;
+}
+.main__content-aside {
+  width: 400px;
+  line-height: 2;
+  padding: 20px 10px;
+}
+.main__content-info {
+  padding: 20px 10px;
+}
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.maint__content-details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.footer {
+  background-color: #8a8585;
+  position: relative;
+  z-index: 6;
+  padding: 8px;
+  color: #fff;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer__logo {
+  font-style: italic;
+  letter-spacing: 3px;
+  color: #fff;
+  margin-left: 20px;
+}
+
+@media (max-width: 992px) {
+  .main__content-aside,
+  .main__content-info {
+    width: 50%;
+  }
+}
+
+@media (max-width: 750px) {
+  .aside {
+    position: unset;
+    width: unset;
+    border-left: unset;
+    padding: 20px;
+  }
+  .main__content {
+    margin-right: unset;
+    flex-direction: column;
+  }
+  .main__content-aside,
+  .main__content-info {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .maint__content-details {
+    margin-bottom: 20px;
+  }
+
+  .header {
+    margin-right: unset;
+  }
+}
+
+@media (max-width: 425px) {
+  .main__content-aside {
+    line-height: 1.5;
+  }
+  .main__content {
+    padding: 10px;
+  }
+  .header__logo {
+    display: none;
+  }
+  .header {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header__menu-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.about-us__content,
+.contacts__content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.about-us__content p,
+.contacts__content p {
+  line-height: 2;
+  font-size: 18px;
+}
